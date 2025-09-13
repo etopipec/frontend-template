@@ -3,3 +3,4 @@
 ### Features
 - ESLint
 - Husky
+- Feature Sliced Design
