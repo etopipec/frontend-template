@@ -9,4 +9,15 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/test-utils'
   ],
+
+  srcDir: 'src/',
+  
+  // Aliases
+  alias: {
+    '@app': './src/app',
+    '@widgets': './src/widgets',
+    '@features': './src/features',
+    '@entities': './src/entities',
+    '@shared': './src/shared'
+  }
 });
