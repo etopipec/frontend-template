@@ -2,3 +2,4 @@
 
 ### Features
 - ESLint
+- Husky

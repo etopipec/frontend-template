@@ -9,7 +9,16 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint"
+    ],
+    "*.{ts,vue}": [
+      "vue-tsc --noEmit"
+    ]
   },
   "dependencies": {
     "@nuxt/eslint": "1.9.0",
@@ -22,6 +31,8 @@
     "vue-router": "4.5.1"
   },
   "devDependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "16.1.6",
     "typescript": "5.9.2"
   }
 }
