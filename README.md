@@ -4,3 +4,4 @@
 - ESLint
 - Husky
 - Feature Sliced Design
+- Primevue
