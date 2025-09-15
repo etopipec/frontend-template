@@ -7,17 +7,28 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/image',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    '@nuxtjs/tailwindcss'
   ],
 
   srcDir: 'src/',
   
-  // Aliases
   alias: {
     '@app': './src/app',
     '@widgets': './src/widgets',
     '@features': './src/features',
     '@entities': './src/entities',
     '@shared': './src/shared'
+  },
+
+  css: [
+    '@/app/styles/tailwind.css',
+    '@/app/styles/global.css',
+  ],
+
+  tailwindcss: {
+    cssPath: '@/app/styles/tailwind.css',
+    configPath: 'tailwind.config',
+    exposeConfig: false,
   }
 });
