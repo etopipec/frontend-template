@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import Aura from '@primeuix/themes/aura';
+
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -8,11 +9,12 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/test-utils',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@primevue/nuxt-module',
   ],
 
   srcDir: 'src/',
-  
+
   alias: {
     '@app': './src/app',
     '@widgets': './src/widgets',
@@ -30,5 +32,16 @@ export default defineNuxtConfig({
     cssPath: '@/app/styles/tailwind.css',
     configPath: 'tailwind.config',
     exposeConfig: false,
+  },
+
+  primevue: {
+    options: {
+      theme: {
+        preset: Aura
+      }
+    },
+    components: {
+      prefix: 'Pv',
+    }
   }
 });
